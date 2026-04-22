@@ -38,4 +38,4 @@ public class ACoreBlock extends CoreBlock {
 
         return tile.block() instanceof CoreBlock && size > tile.block().size && (!requiresCoreZone || tempTiles.allMatch(o -> o.floor().allowCorePlacement));
     }
-    }
+}
