@@ -1,31 +1,26 @@
-package example;
+package example.content.block;
 
-import mindustry.core.GameState;
-import mindustry.game.Team;
-import mindustry.world.Tile;
 import mindustry.world.blocks.storage.CoreBlock;
+import mindustry.world.Tile;
+import mindustry.game.Team;
+import static mindustry.Vars.*;
 
-
-import static mindustry.Vars.state;
-
-public class ACoreBlock extends CoreBlock {
-    public ACoreBlock(String name) {
-        super(name);
-    }
-
-
-    @Override
+public class ACoreBlock extends CoreBlock{
+public ACoreBlock(String name){
+    super(name);
+}
+@Override
     public boolean canBreak(Tile tile){
-        return true;
+        return state.isEditor();
     }
-
-    @Override
+     @Override
     public boolean canPlaceOn(Tile tile, Team team, int rotation){
         if(tile == null) return false;
         //in the editor, you can place them anywhere for convenience
         if(state.isEditor()) return true;
+        if(!state.isEditor()) return true;
 
-        CoreBuild core = team.core();
+        CoreBlock.CoreBuild core = team.core();
 
         //special floor upon which cores can be placed
         tile.getLinkedTilesAs(this, tempTiles);
