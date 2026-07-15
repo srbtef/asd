@@ -1,3 +1,7 @@
+/**
+ * 示例核心方块扩展类。
+ * 说明：扩展自 `CoreBlock`，用于示例和编辑器中放置/移除核心逻辑的定制。
+ */
 package example.content.block;
 
 import mindustry.world.blocks.storage.CoreBlock;

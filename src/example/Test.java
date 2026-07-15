@@ -1,3 +1,7 @@
+/**
+ * 示例 mod 主类 — 用于演示和测试。
+ * 说明：此文件为示例入口，会在客户端加载时显示一个测试对话框，并在 `loadContent` 中加载示例内容。
+ */
 package example;
 
 import mindustry.*;
@@ -34,8 +38,11 @@ public class Test extends Mod{
     @Override
     public void loadContent(){
       super.loadContent();
-            // instantiate custom core block for testing
+          
+            Liquids.load();
+            
             new ACoreBlock("acore");
+
     }
 
 }

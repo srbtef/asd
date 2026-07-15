@@ -1,3 +1,7 @@
+/**
+ * 定义自定义液体的示例类（示例用途）。
+ * 说明：此类定义了示例液体 `Thinner` 与 `neoplasm`，用于演示如何注册自定义液体。
+ */
 package example.content.Liquids;
 
 import arc.graphics.*;
